@@ -1,0 +1,129 @@
+body {
+    background-color: rgb(198, 241, 252);
+    font-family: sans-serif;
+}
+
+#msgBox {
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    /* border:turquoise; */
+    border-style: solid;
+    background-color: white;
+    color: rgb(61, 56, 109);
+    padding: 10px;
+    overflow: auto;
+}
+
+#msgBox div {
+    width: 100%;
+    /* background-color: rgba(181, 181, 182, 0.925); */
+    box-sizing: border-box;
+    /* padding: 5px; */
+    /* padding-bottom: 20px; */
+    margin-bottom: 10px;
+    text-indent: 3%;
+    /* border-bottom: 1px solid #aaa; */
+}
+
+#msgBox div span {
+    /* background-color: rgb(135, 186, 245); */
+    display: block;
+    /* width: 100%; */
+    word-break: break-all;
+    width: 250px;
+    line-height: 200%;
+    border-radius: 25px;
+}
+
+/* #msgBox #sBox{
+    width: inherit;
+    height: 300px;
+} */
+
+.msg-r {
+    direction: rtl;
+    /* background-color: rgb(135, 186, 245); */
+    text-align: right;
+}
+
+#msgBox #header {
+    text-align: center;
+    background-color: hsl(190deg 80% 21% / 94%);
+    color: white;
+    /* width: 100%; */
+    width: inherit;
+    position: absolute;
+    margin-block: 0;
+    /* padding-top: 0; */
+    height: 60px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-content: space-evenly;
+    /* transform: translate(0, -20%); */
+    max-width: -webkit-fill-available;
+    transition: width 1s ease-in-out;
+}
+
+.msg-l {
+    direction: ltr;
+    text-align: left;
+    /* background-color: rgba(135, 186, 245, 0.562); */
+}
+
+/* form {
+    margin-top: 10px;
+    width: 500px;
+} */
+
+#msgBox form {
+    margin-top: 10px;
+    width: 500px;
+}
+
+form input {
+    border-radius: 15px;
+    background-color: white;
+    box-sizing: border-box;
+    /* width: 100%; */
+    width: 425px;
+    color: rgb(61, 56, 109);
+    padding: 10px;
+    padding-bottom: 30px;
+    font-size: unset;
+}
+
+#msgBox .endChat {
+    position: sticky;
+    top: inherit;
+    /* position: fixed; */
+    left: 395px;
+    color: red;
+    -webkit-text-stroke: thick;
+}
+
+#msgBox .custBtn {
+    width: 95%;
+    /* position: relative; */
+    color: black;
+    background-color: lightblue;
+    padding-right: 20px;
+    height: 35px;
+    border-radius: 30px;
+}
+
+label {
+    text-align: center;
+    display: inline-block;
+    font-weight: bolder;
+    width: 40%;
+    margin-top: 10px;
+}
+
+#btnHistory {
+    position: sticky;
+    background-color: rgb(27, 11, 87);
+     color: white;
+     right: 1000px;
+
+}
