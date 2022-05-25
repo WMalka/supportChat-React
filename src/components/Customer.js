@@ -34,10 +34,6 @@ const Customer = withRouter((props)=> {
     }
     const back = '<<<'
 
-    function showHistory() {
-
-    }
-
     useEffect(() => {
         socket.emit("login", user)
         socket.emit("allUsers")
@@ -62,7 +58,7 @@ const Customer = withRouter((props)=> {
                         <button className="endChat" onClick={() => endChat()} >
                             X {logout && <Login />}
                         </button>
-                        <button id="btnHistory" onClick={() => showHistory()}>{back}</button>
+                        <button id="btnHistory" >{back}</button>
                         Contact Support
                     </div>
                     <div style={{ marginTop: "80px" }}></div>
