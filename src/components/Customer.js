@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
     return { ...state, user: state.chatReducer.user || [] }
 }
 
-const Customer = withRouter(function Customer(props) {
+const Customer = withRouter((props)=> {
 
     const { history } = props;
     const [messages, setMessages] = useState([]);

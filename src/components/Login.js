@@ -12,7 +12,7 @@ const mapDispatchToProps = (dispatch) => ({
     setUser: (loggedUser) => dispatch(actions.setUser(loggedUser))
 })
 
-const Login = withRouter(function Login(props) {
+const Login = withRouter((props) =>{
 
     const { history } = props;
     const [value, setValue] = useState('');

@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
     return { ...state, user: state.chatReducer.user || [] }
 }
 
-const Support = withRouter(function Support(props) {
+const Support = withRouter((props) =>{
 
     const addConversations = (msg) => {
         setConversations(oldMessages => [...oldMessages, ...(Array.isArray(msg) ? msg.reverse() : [msg])]);
