@@ -24,7 +24,7 @@ const Login = withRouter((props) =>{
             history.push('/Chat');
         })
         socket.connect();
-    }, [])
+    }, [history,props])
 
 
     const email = e => {

@@ -15,15 +15,9 @@ const Customer = withRouter((props)=> {
 
     const { history } = props;
     const [messages, setMessages] = useState([]);
-    const [logout, setLogout] = useState(false);
-
+    let logout = false;
     let user;
-    const currentUser = (props) => {
-        props.user.map((singleUser, index) => {
-            user = (singleUser.email ? singleUser : 'something')
-        })
-        return user;
-    }
+    
 
     const addMessage = (msg) => {
         setMessages(oldMessages => [...oldMessages, ...(Array.isArray(msg) ? msg.reverse() : [msg])]);
@@ -48,7 +42,7 @@ const Customer = withRouter((props)=> {
 
         socket.connect();
 
-    }, []);
+    }, [user]);
 
     return (
         <>
@@ -62,7 +56,7 @@ const Customer = withRouter((props)=> {
                         Contact Support
                     </div>
                     <div style={{ marginTop: "80px" }}></div>
-                    {messages.map((msg, index) => { return (msg.customer == user.email) ? <Message msg={msg} /> : '' }
+                    {messages.map((msg, index) => { return (msg.customer === user.email) ? <Message msg={msg} /> : '' }
                     )}
                 </div>
                 <MessageBox isAgent={false} cust={user.email} conversation={user.conversation} />

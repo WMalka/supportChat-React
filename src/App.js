@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Support from "./components/Support";
 import Customer from "./components/Customer";
@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import Login from "./components/Login";
 
-const App = (props) => {
+const App = () => {
 
 
     return (

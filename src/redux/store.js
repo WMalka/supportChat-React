@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import chatReducer from './reducers/chatReducer';
 
 const reducer = combineReducers({ chatReducer })
